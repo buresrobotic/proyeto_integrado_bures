@@ -1,17 +1,15 @@
 #!/usr/bin/env python
 # license removed for brevity
-import rospy
+import rospy #importamos los modulos necesarios
 from std_msgs.msg import Int16
 
-def callback(msg):
+def callback(msg): #creamos una funcion que reciba el mensaje y lo muestre por pantalla
     rospy.loginfo("mensaje recibido: %s",msg.data)
 
-def memory_subscriber():
-    rospy.init_node('suscriptor_ej2',anonymous=True)
- #el primer argumento, es el nombrel del topic al que queremos suscribirnos...
- #el segundo argumento es el tipo de mensaje,
-    rospy.Subscriber('contador',Int16,callback)
-    rospy.spin()
+def memory_subscriber(): #funcion principal
+    rospy.init_node('suscriptor_ej2',anonymous=True) #creamos el nodo
+    rospy.Subscriber('contador',Int16,callback) #creamos el suscriptor
+    rospy.spin() #hacemos que el programa siga funcionando
 
 if __name__ == "__main__":
     try:
