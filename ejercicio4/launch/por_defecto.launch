@@ -1,0 +1,4 @@
+<launch>
+	<node pkg="ejercicio4" type="ej4.py" name="publicador_datos" output="screen">
+	</node>
+</launch>

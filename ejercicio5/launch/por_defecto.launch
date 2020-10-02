@@ -1,0 +1,4 @@
+<launch>
+	<node pkg="ejercicio5" type="ej5.py" name="subscriptor" output="screen">
+	</node>
+</launch>

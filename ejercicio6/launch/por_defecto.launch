@@ -1,0 +1,4 @@
+<launch>
+	<node pkg="ejercicio6" type="ej6.py" name="numeros" output="screen">
+	</node>
+</launch>
